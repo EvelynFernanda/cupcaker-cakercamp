@@ -1,9 +1,12 @@
-import { Stories } from 'components/molecules/Stories '
 import React from 'react'
 
 // import logo from 'app/core/resources/logo.svg'
 
+import LabelType from 'components/atoms/LabelType'
+import { Stories } from 'components/molecules/Stories '
+
 import styles from './styles.module.scss'
+// import Tag from 'components/atoms/Tag'
 
 const Home = (): JSX.Element => {
   return (
@@ -16,7 +19,9 @@ const Home = (): JSX.Element => {
           Learn React
         </a> */}
        <Stories />
+       {/* <Tag text='Xbox Series' /> */}
       </header>
+      <LabelType text='#Games' />
     </main>
   )
 }
