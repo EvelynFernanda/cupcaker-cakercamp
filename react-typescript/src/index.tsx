@@ -9,13 +9,17 @@ import App from 'app/core/App'
 
 import './index.css'
 
+import moment from 'moment'
+import 'moment/locale/pt-br'
+
+
 Sentry.init({
   dsn: process.env.REACT_APP_SENTRY_DSN,
   integrations: [new BrowserTracing()],
   tracesSampleRate: 1.0,
   enabled: process.env.NODE_ENV === 'production',
 })
-
+moment.locale('pt-br')
 ReactDOM.render(
   <React.StrictMode>
     <App />

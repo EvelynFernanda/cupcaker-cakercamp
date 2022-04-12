@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 10px;
-  background-color: #7E7E7E;   
-  max-height: 10vh;
-  max-width: 10vh;
+  background-color: rgba(0,0,0,.5);  
+  height: 25px;
+  width: auto;
   border-left-width: 4px;
   border-left-style: solid;
   border-left-color: #E53934;
+  position: absolute;
+  display: flex;
+  align-items: center;
 `;
 
 export const Text = styled.p`

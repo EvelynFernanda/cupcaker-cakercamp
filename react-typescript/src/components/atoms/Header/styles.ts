@@ -20,14 +20,10 @@ export const ContainerSvg = styled.div`
    display: flex;
    justify-content: flex-end;
    svg{
-       margin: 10px;
-       
+      margin: 10px;
+      cursor: pointer; 
    }
-   button{
-    background: none;
-    border: none;
-    cursor: pointer;
-   }
+
 `
 export const ContainerBlack = styled.div`
   background-color: #222;
