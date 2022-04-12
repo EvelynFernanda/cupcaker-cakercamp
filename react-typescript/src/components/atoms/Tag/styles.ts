@@ -4,15 +4,13 @@ import styled from "styled-components";
 type ColorProps = {
     color: string;
 }
-export const Container = styled.div<ColorProps>`
+export const Container = styled.a<ColorProps>`
   background-color: ${(props) => props.color};   
   border-radius: 2px;
-
+  padding: 2px 5px;
+  color: #FFF;
+  font-size: 13px;
+  text-shadow: #000 1px 1px 0px;
+  margin: 0 3px 0 0;
 `;
 
-export const Text = styled.p`
- color: #FFF;
- font-size: 13px;
- text-shadow: #000 1px 1px 0px;
- margin: 2px 5px 2px 5px;
-`;

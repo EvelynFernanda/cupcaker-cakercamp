@@ -1,5 +1,4 @@
 import { ListStories } from 'components/atoms/ListStories';
-import React from 'react';
 import { Container} from './styles';
 
 

@@ -1,13 +1,13 @@
-import * as C from './styles';
+import { Container, Text } from './styles';
 
 type Text = {
- text: string;
+    text: string;
 }
-const LabelType = ({text}:Text): JSX.Element  => {
+const LabelType = ({ text }: Text): JSX.Element => {
     return (
-        <C.Container>
-            <C.Text>{text} </C.Text>
-        </C.Container>
+        <Container>
+            <Text>{text} </Text>
+        </Container>
     );
 }
 export default LabelType;

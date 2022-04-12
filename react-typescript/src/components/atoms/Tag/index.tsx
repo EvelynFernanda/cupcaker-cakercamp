@@ -1,4 +1,4 @@
-import * as C from './styles';
+import {Container} from './styles';
 
 type Text = {
     text: string;
@@ -31,9 +31,7 @@ const Tag = ({ text }: Text): JSX.Element => {
             break;
     }
     return (
-        <C.Container color={cor}>
-            <C.Text>{text} </C.Text>
-        </C.Container>
+        <Container color={cor}>{text}</Container>
     );
 }
 export default Tag;
