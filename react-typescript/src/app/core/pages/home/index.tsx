@@ -7,7 +7,8 @@ import React from 'react'
 
 // import styles from './styles.module.scss'
 // import { ListNews } from 'components/molecules/ListNews'
-import { HomeNews } from 'components/molecules/HomeNews'
+// import { HomeNews } from 'components/molecules/HomeNews'
+import { CarouselC } from 'components/molecules/CarouselC'
 // import Header from 'components/atoms/Header'
 // import Tag from 'components/atoms/Tag'
 
@@ -17,10 +18,11 @@ const Home = (): JSX.Element => {
 
       {/* <header className={styles.header}> */}
       {/* <Stories /> */}
-     <HomeNews />
+     {/* <HomeNews /> */}
       {/* <Header /> */}
     {/* </header> */}
       {/* <LabelType text='#Games' /> */ }
+      <CarouselC />
 
     </main >
   )

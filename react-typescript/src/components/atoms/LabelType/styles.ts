@@ -10,6 +10,7 @@ export const Container = styled.div`
   position: absolute;
   display: flex;
   align-items: center;
+  margin: 1.2rem;
 `;
 
 export const Text = styled.p`
