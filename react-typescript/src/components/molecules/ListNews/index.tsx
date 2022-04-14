@@ -1,20 +1,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import LabelType from 'components/atoms/LabelType';
 import Tag from 'components/atoms/Tag';
-import { Main, Container, ContainerLabel, ContainerImg, Title, Description, ContainerTags, Footer, ContainerDetails, Comments, ContainerComments } from './styles';
+import { Main, Container, ContainerImg, Title, Description, ContainerTags, Footer, ContainerDetails, Comments, ContainerComments, ContainerImgs, ContainerText } from './styles';
 import moment from 'moment';
 import ChatBubbleIcon from '@mui/icons-material/ChatBubble';
 
 type News = {
-    img: string;
-    title?: string;
-    description?: string;
+    title: string;
+    description: string;
     author: string;
     createdAt: string;
     comments: number;
+    tags: string[];
+    type: string;
+    image: string;
+
 }
 
-export const ListNews = ({ title, img, description, author, createdAt, comments }: News): JSX.Element => {
+export const ListNews = ({ title, image, description, author, createdAt, comments, tags, type }: News): JSX.Element => {
     const momentDate = moment(createdAt).fromNow()
     let newMomentDate = ""
     if (momentDate == "há um dia") {
@@ -26,19 +29,25 @@ export const ListNews = ({ title, img, description, author, createdAt, comments 
     }
     return (
         <Container>
-            <ContainerImg>
-                <img src={img} alt="Logo" />
-                <ContainerLabel>
-                    <LabelType text='#Games' />
-                </ContainerLabel>
-            </ContainerImg>
+            <ContainerImgs>
+                <ContainerImg>
+                    <img src={image} alt="Logo" />
+                </ContainerImg>
+
+                <LabelType text={type} />
+            </ContainerImgs>
+
             <Main>
-                <Title>{title}</Title>
-                <Description>{description}</Description>
+                <ContainerText>
+                    <Title>{title}</Title>
+                    <Description>{description}</Description>
+                </ContainerText>
+
                 <ContainerDetails>
                     <ContainerTags>
-                        <Tag text='Xbox Series' />
-                        <Tag text='lalal' />
+                        {tags.map((item) => (
+                            <Tag text={item} />
+                        ))}
                         <Footer>
                             Por <strong>{author}</strong>,
                         </Footer>

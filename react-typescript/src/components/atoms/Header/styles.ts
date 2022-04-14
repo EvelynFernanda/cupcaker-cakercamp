@@ -19,6 +19,9 @@ export const ContainerSvg = styled.div`
    max-width: 1100px;
    display: flex;
    justify-content: flex-end;
+   button {
+      all: unset;
+   }
    svg{
       margin: 10px;
       cursor: pointer; 

@@ -4,13 +4,9 @@ export const Container = styled.div`
   max-width: 200px;
 `
 export const ContainerImg = styled.div`
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: auto;
-  width: 90px;
-  height: 90px;
+  width: 100px;
+  height: 100px;
   overflow: hidden;
   border-radius: 50%;
   border: 2px solid #c1cad9;
@@ -38,6 +34,7 @@ export const Text = styled.p`
   margin: 5px;
   color: #444;
   font-size: 12px;
+  font-weight: 500;
   text-align: center;
 
 `

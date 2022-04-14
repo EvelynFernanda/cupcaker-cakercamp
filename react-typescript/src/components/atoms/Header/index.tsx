@@ -1,7 +1,8 @@
 import { Container, CenterDiv, ContainerBlack, ContainerSvg } from './styles';
 import ModeNightIcon from '@mui/icons-material/ModeNight';
 
-const Header = (): JSX.Element => {
+export const Header = (): JSX.Element => {
+
     return (
         <Container>
             <CenterDiv>
@@ -15,4 +16,3 @@ const Header = (): JSX.Element => {
         </Container>
     );
 }
-export default Header;

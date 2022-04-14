@@ -1,31 +1,24 @@
-import React from 'react'
-
-// import logo from 'app/core/resources/logo.svg'
-
-// import LabelType from 'components/atoms/LabelType'
-// import { Stories } from 'components/molecules/Stories '
-
-// import styles from './styles.module.scss'
-// import { ListNews } from 'components/molecules/ListNews'
-// import { HomeNews } from 'components/molecules/HomeNews'
+import { Main, Container, ContainerStories } from './styles';
+import { Header } from 'components/atoms/Header';
 import { CarouselC } from 'components/molecules/CarouselC'
-// import Header from 'components/atoms/Header'
-// import Tag from 'components/atoms/Tag'
+import { Stories } from 'components/molecules/Stories ';
+import { HomeNews } from 'components/molecules/HomeNews';
 
 const Home = (): JSX.Element => {
+  
   return (
-    <main>
+    <Container>
+      <Header />
+      <Main>
+        <CarouselC />
+        <ContainerStories>
+          <Stories />
+        </ContainerStories>
+        <HomeNews />
+      </Main >
+    </Container>
 
-      {/* <header className={styles.header}> */}
-      {/* <Stories /> */}
-     {/* <HomeNews /> */}
-      {/* <Header /> */}
-    {/* </header> */}
-      {/* <LabelType text='#Games' /> */ }
-      <CarouselC />
-
-    </main >
   )
 }
 
-export default Home
+export default Home;
